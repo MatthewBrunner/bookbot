@@ -6,9 +6,12 @@ def main():
     list_of_dicts = dict_to_list_dict(character_dict)
     list_of_dicts.sort(reverse=True, key=sort_on)
     print("--- Begin report of books/frankenstein.txt ---")
+    print()
     print(f"Word count is: {num_words}.")
+    print()
     for dict in list_of_dicts:
         print(f"The character {dict['name']} was found {dict['num']} times.")
+    print()
     print("--- End report ---")
 
 def get_num_words(text):
