@@ -3,12 +3,7 @@ def get_num_words(text):
     return len(words)
 
 
-def get_book_text(path):
-    with open(path) as f:
-        return f.read()
-
-
-def char_count(text):
+def get_num_chars(text):
     char_dict = {}
     lowered_text = text.lower()
     for char in lowered_text:
@@ -17,3 +12,10 @@ def char_count(text):
         else:
             char_dict.update({char: 1})
     return char_dict
+
+
+def char_sort(dict):
+    def sort_on(dict):
+        return dict
+
+    return
