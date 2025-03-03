@@ -14,8 +14,14 @@ def get_num_chars(text):
     return char_dict
 
 
-def char_sort(dict):
-    def sort_on(dict):
-        return dict
+def get_list_dict(dict):
+    list_of_dicts = []
 
-    return
+    def sort_on(dict):
+        return dict["count"]
+
+    for c in dict:
+        temp_dict = {"char": c, "count": dict.get(c)}
+        list_of_dicts.append(temp_dict)
+    list_of_dicts.sort(reverse=True, key=sort_on)
+    return list_of_dicts
